@@ -29,14 +29,26 @@ class Main extends Sprite
 		cat.height = Lib.current.stage.stageHeight;
 		cat.width = Lib.current.stage.stageWidth;
 		
-		Lib.current.stage.addEventListener(Event.RESIZE, stage_onResize); 
+		Lib.current.stage.addEventListener(Event.RESIZE, stage_onResize);
+
 		addChild (cat);
-		addChild (new FPS ()); 
+		//addChild (new FPS ());
+		addChildAt(new FPS(), 1);	
 	}
 	
 	private function stage_onResize (event:Event):Void {
-		cat.width = stage.stageWidth;
-		cat.height = stage.stageHeight;
+		
+			trace("\nstage_onResize() was called...");
+			trace("------------------------------");		
+
+		cat.x = stage.stageWidth / 3;
+		cat.y = stage.stageHeight / 3;
+		
+		cat.width = stage.stageWidth / 2;
+			trace("MC Width is now ..." + cat.width);
+			
+		cat.height = stage.stageHeight / 2;
+			trace("MC Height is now ..." + cat.height);
 	} 
 	
 	public static function main() 

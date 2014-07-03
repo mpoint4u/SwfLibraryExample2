@@ -9,7 +9,7 @@
 	<!-- output -->
 	<app main="Main" file="SwfLibraryExample2" path="bin" />
 	
-	<window background="#000000" fps="24" />
+	<window background="#FFFFFF" fps="24" />
 	<window width="800" height="480" unless="mobile" />
 	<window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />
 	
